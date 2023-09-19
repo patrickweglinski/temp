@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using CS3750Project.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<CS3750ProjectContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CS3750ProjectContext") ?? throw new InvalidOperationException("Connection string 'CS3750ProjectContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -22,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();

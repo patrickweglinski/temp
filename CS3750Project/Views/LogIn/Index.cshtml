@@ -1,0 +1,27 @@
+﻿@model CS3750Project.Models.User
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Please log in:</p>
+    <div class="card">
+        <div class="card-body">
+            <form method="post" asp-controller="Login" asp-action="OnPost" novalidate>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="Email" name="Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="Password" name="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-25">Login</button>
+            </form>
+            <div class="text-center mt-3">
+                <a href="/SignUp">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>

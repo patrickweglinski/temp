@@ -25,7 +25,7 @@ namespace CS3750Project.Controllers
         }
 
         [BindProperty]
-        public User User { get; set; } = default!;
+        public new User User { get; set; } = default!;
 
         public async Task<IActionResult> OnPostAsync()
         {

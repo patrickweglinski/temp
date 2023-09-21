@@ -9,49 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CS3750Project
 build_property.RootNamespace = CS3750Project
-build_property.ProjectDir = C:\Users\Kevin\OneDrive\Documents\College\Fall 2023\CS3750\CS3750_Project\CS3750project\CS3750Project\
+build_property.ProjectDir = C:\Users\House Vagrant\Documents\GitHub\CS3750project\CS3750Project\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Kevin\OneDrive\Documents\College\Fall 2023\CS3750\CS3750_Project\CS3750project\CS3750Project
+build_property.MSBuildProjectDirectory = C:\Users\House Vagrant\Documents\GitHub\CS3750project\CS3750Project
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/Home/Index.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/Home/Privacy.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/LogIn/Index.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/LogIn/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/Shared/Error.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Profile/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/SignUp/Index.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/SignUp/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnblVwXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/Welcome/Index.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Welcome/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/_ViewImports.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/_ViewStart.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/OneDrive/Documents/College/Fall 2023/CS3750/CS3750_Project/CS3750project/CS3750Project/Views/Shared/_Layout.cshtml]
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-f8qrvhsapv

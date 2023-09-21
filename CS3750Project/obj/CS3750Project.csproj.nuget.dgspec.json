@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kevin\\OneDrive\\Documents\\College\\Fall 2023\\CS3750\\CS3750_Project\\CS3750project\\CS3750Project\\CS3750Project.csproj": {}
+    "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\CS3750Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kevin\\OneDrive\\Documents\\College\\Fall 2023\\CS3750\\CS3750_Project\\CS3750project\\CS3750Project\\CS3750Project.csproj": {
+    "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\CS3750Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kevin\\OneDrive\\Documents\\College\\Fall 2023\\CS3750\\CS3750_Project\\CS3750project\\CS3750Project\\CS3750Project.csproj",
+        "projectUniqueName": "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\CS3750Project.csproj",
         "projectName": "CS3750Project",
-        "projectPath": "C:\\Users\\Kevin\\OneDrive\\Documents\\College\\Fall 2023\\CS3750\\CS3750_Project\\CS3750project\\CS3750Project\\CS3750Project.csproj",
-        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kevin\\OneDrive\\Documents\\College\\Fall 2023\\CS3750\\CS3750_Project\\CS3750project\\CS3750Project\\obj\\",
+        "projectPath": "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\CS3750Project.csproj",
+        "packagesPath": "C:\\Users\\House Vagrant\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\House Vagrant\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CS3750Project.Data;
+using CS3750Project.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CS3750Project.Controllers
 {
@@ -12,6 +14,12 @@ namespace CS3750Project.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult Profile()
+        {
+            string id = HttpContext.Session.GetString("GetUser");
+            return RedirectToAction("Index", "Profile", new { email = id });
         }
     }
 }

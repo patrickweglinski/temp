@@ -32,5 +32,16 @@ namespace CS3750Project.Models
         [Required]
         [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
+
+        [Display(Name = "Address One")]
+        public string? AddressLineOne { get; set; }
+
+        [Display(Name = "Address Two")]
+        public string? AddressLineTwo { get; set; }
+        public string? City { get; set; }
+        public string? State {  get; set; }
+
+        [Display(Name = "Zip Code")]
+        public string? ZipCode { get; set;}
     }
 }

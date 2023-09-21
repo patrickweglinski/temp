@@ -3,3 +3,91 @@
 *@
 @{
 }
+
+
+<div class="card-container">
+
+    <div class="card" style="background-color: azure">
+        <h2>CS 3750</h2>
+        <div class="info">
+            <p>Class: Software Engineering</p>
+            <p>Room: Noorda 234</p>
+            <p>Time: 11:00 AM - 1:20 PM</p>
+            <p>Days: Tue-Thur</p>
+
+        </div>
+
+    </div>
+
+    <div class="card" style="background-color:ivory">
+        <h2>CS 3030</h2>
+        <div class="info">
+            <p>Class: Scripting Languages</p>
+            <p>Room: Noorda 210</p>
+            <p>Time: 9:00 AM - 10:40 AM</p>
+            <p>Days: Tue-Thur</p>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="card-container">
+
+    <div class="card" style="background-color:linen">
+        <h2>CS 1400</h2>
+        <div class="info">
+            <p>Class: Programming I</p>
+            <p>Room: Noorda 310</p>
+            <p>Time: 3:00 PM - 4:00 PM </p>
+            <p>Days: M - W</p>
+
+        </div>
+    </div>
+
+    <div class="card" style="background-color:lavender">
+        <h2>CS 2810</h2>
+        <div class="info">
+            <p>Class: Computer Architecture </p>
+            <p>Room: Noorda 122</p>
+            <p>Time: 7:00 PM - 9:00 PM </p>
+            <p>Days: M - W</p>
+
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info {
+        border-style: solid;
+        border-radius: 1em;
+        border-color: darkgray;
+        padding: 1em;
+        filter: grayscale(60%);
+    }
+
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 25em;
+        padding: 20px;
+        margin: 20px;
+        text-align: left;
+    }
+
+    h2 {
+        color: darkslategray;
+    }
+
+    p {
+        color: #666;
+    }
+
+</style>

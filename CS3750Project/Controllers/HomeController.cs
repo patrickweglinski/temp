@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CS3750Project.Data;
+using CS3750Project.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CS3750Project.Controllers
 {
@@ -13,10 +15,11 @@ namespace CS3750Project.Controllers
         {
             return View();
         }
-        public IActionResult Upload()
-        {
-            return RedirectToAction("Index", "Upload");
-        }
 
+        public IActionResult Profile()
+        {
+            string id = HttpContext.Session.GetString("GetUser");
+            return RedirectToAction("Index", "Profile", new { email = id });
+        }
     }
 }

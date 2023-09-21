@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace CS3750Project.Controllers
 {
     public class LoginController : Controller
     {
+
         private readonly CS3750ProjectContext _context;
 
         public LoginController(CS3750ProjectContext context)
@@ -32,7 +34,8 @@ namespace CS3750Project.Controllers
             {
                 return View();
             }
-
+            
+            HttpContext.Session.SetString("GetUser", user.Email);
             return RedirectToAction("Index", "Welcome", new { email = user.Email });
         }
     }

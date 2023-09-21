@@ -11109,24 +11109,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kevin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Ethan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kevin\\OneDrive\\Documents\\College\\Fall 2023\\CS3750\\CS3750_Project\\CS3750project\\CS3750Project\\CS3750Project.csproj",
+      "projectUniqueName": "C:\\Users\\Ethan\\Source\\Repos\\CS3750project\\CS3750Project\\CS3750Project.csproj",
       "projectName": "CS3750Project",
-      "projectPath": "C:\\Users\\Kevin\\OneDrive\\Documents\\College\\Fall 2023\\CS3750\\CS3750_Project\\CS3750project\\CS3750Project\\CS3750Project.csproj",
-      "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kevin\\OneDrive\\Documents\\College\\Fall 2023\\CS3750\\CS3750_Project\\CS3750project\\CS3750Project\\obj\\",
+      "projectPath": "C:\\Users\\Ethan\\Source\\Repos\\CS3750project\\CS3750Project\\CS3750Project.csproj",
+      "packagesPath": "C:\\Users\\Ethan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ethan\\Source\\Repos\\CS3750project\\CS3750Project\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Ethan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11134,7 +11129,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

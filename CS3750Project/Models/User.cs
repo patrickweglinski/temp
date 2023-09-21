@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CS3750Project.Models
@@ -30,7 +31,10 @@ namespace CS3750Project.Models
         /// The birthday of the user
         /// </summary>
         [Required]
+        [MinimumAge(16)]
         [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
+
+       
     }
 }

@@ -13,5 +13,10 @@ namespace CS3750Project.Controllers
         {
             return View();
         }
+        public IActionResult Upload()
+        {
+            return RedirectToAction("Index", "Upload");
+        }
+
     }
 }

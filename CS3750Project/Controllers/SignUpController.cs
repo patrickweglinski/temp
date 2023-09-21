@@ -37,7 +37,7 @@ namespace CS3750Project.Controllers
             _context.User.Add(User);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Index", "Welcome", new { email = User.Email });
+            return RedirectToAction("Index", "Home", new { email = User.Email });
         }
     }
 }

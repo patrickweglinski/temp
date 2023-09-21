@@ -33,7 +33,7 @@ namespace CS3750Project.Controllers
                 return View();
             }
 
-            return RedirectToAction("Index", "Welcome", new { email = user.Email });
+            return RedirectToAction("Index", "Home", new { email = user.Email });
         }
     }
 }

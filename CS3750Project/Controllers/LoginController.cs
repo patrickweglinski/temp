@@ -36,7 +36,7 @@ namespace CS3750Project.Controllers
             }
             
             HttpContext.Session.SetString("GetUser", user.Email);
-            return RedirectToAction("Index", "Welcome", new { email = user.Email });
+            return RedirectToAction("Index", "Home", new { email = user.Email });
         }
     }
 }

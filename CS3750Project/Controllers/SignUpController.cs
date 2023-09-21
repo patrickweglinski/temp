@@ -31,7 +31,7 @@ namespace CS3750Project.Controllers
         {
             if (!ModelState.IsValid || _context.User == null || User == null)
             {
-                return View();
+                return View("Index");
             }
 
             _context.User.Add(User);

@@ -45,5 +45,8 @@ namespace CS3750Project.Models
 
         [Display(Name = "Zip Code")]
         public string? ZipCode { get; set;}
+
+        [Required]
+        public bool IsStudent { get; set; }
     }
 }

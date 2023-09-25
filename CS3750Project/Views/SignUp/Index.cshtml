@@ -35,6 +35,35 @@
                 <input asp-for="BirthDate" class="form-control" />
                 <span asp-validation-for="BirthDate" class="text-danger"></span>
             </div>
+            <div>class = "form group"
+                <label>Select Role:</label>
+                <div>
+                    <label>
+                        <input asp-for="IsStudent" type = "radio" value="true" required />
+                        Student
+                    </label>
+                    <label>
+                        <input asp-for="IsStudent" type="radio" value="false" required />
+                        Teacher
+                    </label>
+                </div>
+                <span asp-validation-for="IsStudent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Link1" class="control-label"></label>
+                <input asp-for="Link1" class="form-control" />
+                <span asp-validation-for="Link1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Link2" class="control-label"></label>
+                <input asp-for="Link2" class="form-control" />
+                <span asp-validation-for="Link2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Link3" class="control-label"></label>
+                <input asp-for="Link3" class="form-control" />
+                <span asp-validation-for="Link3" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="SignUp" class="btn btn-primary" />
             </div>

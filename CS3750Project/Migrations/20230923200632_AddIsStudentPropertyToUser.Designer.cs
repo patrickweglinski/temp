@@ -4,6 +4,7 @@ using CS3750Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CS3750Project.Migrations
 {
     [DbContext(typeof(CS3750ProjectContext))]
-    partial class CS3750ProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20230923200632_AddIsStudentPropertyToUser")]
+    partial class AddIsStudentPropertyToUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,15 +51,6 @@ namespace CS3750Project.Migrations
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Link1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Link2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Link3")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")

@@ -45,5 +45,15 @@ namespace CS3750Project.Models
 
         [Display(Name = "Zip Code")]
         public string? ZipCode { get; set;}
+
+        [Required]
+        public bool IsStudent { get; set; }
+
+        [Display(Name = "Website 1")]
+        public string? Link1 { get; set; }
+        [Display(Name = "Website 2")]
+        public string? Link2 { get; set; }
+        [Display(Name = "Website 3")]
+        public string? Link3 { get; set; }
     }
 }

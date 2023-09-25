@@ -49,7 +49,7 @@ namespace CS3750Project.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("FirstName,LastName,Password,Email,BirthDate,AddressLineOne,AddressLineTwo,City,State,ZipCode")] User user)
+        public async Task<IActionResult> Edit(string id, [Bind("FirstName,LastName,Password,Email,BirthDate,AddressLineOne,AddressLineTwo,City,State,ZipCode,Link1,Link2,Link3")] User user)
         {
             if (id != user.Email)
             {

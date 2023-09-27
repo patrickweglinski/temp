@@ -10,23 +10,23 @@ namespace CS3750Project.Models
         /// The first name of the user
         /// </summary>
         [Required]
-        public string? FirstName { get; set; }
+        public string FirstName { get; set; }
         /// <summary>
         /// The last name of the user
         /// </summary>
         [Required]
-        public string? LastName { get; set; }
+        public string LastName { get; set; }
         /// <summary>
         /// The email of the user
         /// </summary>
         [Required]
         [Key]
-        public string? Email { get; set; }
+        public string Email { get; set; }
         /// <summary>
         /// The password of the user
         /// </summary>
         [Required]
-        public string? Password { get; set; }
+        public string Password { get; set; }
         /// <summary>
         /// The birthday of the user
         /// </summary>
@@ -55,5 +55,6 @@ namespace CS3750Project.Models
         public string? Link2 { get; set; }
         [Display(Name = "Website 3")]
         public string? Link3 { get; set; }
+        public string? ImageFileName { get; set; }
     }
 }

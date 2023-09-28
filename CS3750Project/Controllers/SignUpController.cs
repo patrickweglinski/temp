@@ -27,9 +27,10 @@ namespace CS3750Project.Controllers
         [BindProperty]
         public new User User { get; set; } = default!;
 
+        [HttpPost]
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.User == null || User == null)
+            if (!ModelState.IsValid || User == null)
             {
                 return View("Index");
             }

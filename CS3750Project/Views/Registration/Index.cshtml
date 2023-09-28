@@ -1,0 +1,59 @@
+﻿@model CS3750Project.Models.User
+
+@{
+    ViewData["Title"] = "Class Registration";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Title</th>
+                <th>Instructor</th>
+                <th>Room</th>
+                <th>Meeting Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CS 3752</td>
+                <td>Software Engineering II</td>
+                <td>Arpit Christi</td>
+                <td>CAE 141</td>
+                <td>11:30AM - 1:20PM T, F</td>
+                <td >
+                    @using (Html.BeginForm("Register", "Registration", FormMethod.Post))
+                    {
+                        @Html.HiddenFor(Model => Model.Email)
+                        @if (Model.IsStudent)
+                        {
+                            <input type="Submit" value="Registraton">
+                        }
+                        else
+                        {
+                            <input type="Submit" value="Drop">
+                        }                     
+                    }
+                </td>
+            </tr>
+        </tbody>
+        
+    </table>
+    
+</div>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        width: 200px;
+        text-align: center;
+        padding: 5px;
+    }
+
+</style>

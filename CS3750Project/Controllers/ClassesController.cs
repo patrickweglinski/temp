@@ -41,7 +41,7 @@ namespace CS3750Project.Controllers
             {
                 return NotFound();
             }
-
+            
             return View(@class);
         }
 
@@ -56,7 +56,7 @@ namespace CS3750Project.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ClassDept,ClassName,CreditHours,Location,DaysOfWeek,TimeOfDay")] Class @class)
+        public async Task<IActionResult> Create([Bind("Id,ClassDept,ClassName,ClassNumber,CreditHours,Location,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,StartTime,EndTime")] Class @class)
         {
             if (ModelState.IsValid)
             {
@@ -64,6 +64,7 @@ namespace CS3750Project.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            var errors = ModelState.Select(x => x.Value.Errors).Where(y =>y.Count > 0).ToList();
             return View(@class);
         }
 
@@ -88,7 +89,7 @@ namespace CS3750Project.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ClassDept,ClassName,CreditHours,Location,DaysOfWeek,TimeOfDay")] Class @class)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ClassDept,ClassName,ClassNumber,CreditHours,Location,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,StartTime,EndTime")] Class @class)
         {
             if (id != @class.Id)
             {

@@ -19,16 +19,23 @@
                 @Html.DisplayNameFor(model => model.ClassName)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.ClassNumber)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.CreditHours)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Location)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DaysOfWeek)
+                Days of Week
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TimeOfDay)
+                @Html.DisplayNameFor(model => model.EndTime)
             </th>
             <th></th>
         </tr>
@@ -43,17 +50,64 @@
                 @Html.DisplayFor(modelItem => item.ClassName)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.ClassNumber)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.CreditHours)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DaysOfWeek)
+                    @if (item.Monday)
+                    {
+                        <span>Monday</span>
+
+                        <br />
+                    }
+                    @if (item.Tuesday)
+                    {
+                        <span>Tuesday</span>
+
+                        <br />
+                    }
+                    @if (item.Wednesday)
+                    {
+                        <span>Wednesday</span>
+
+                        <br />
+                    }
+                    @if (item.Thursday)
+                    {
+                        <span>Thursday</span>
+
+                        <br />
+                    }
+                    @if (item.Friday)
+                    {
+                        <span>Friday</span>
+
+                        <br />
+                    }
+                    @if (item.Saturday)
+                    {
+                        <span>Saturday</span>
+
+                        <br />
+                    }
+                    @if (item.Sunday)
+                    {
+                        <span>Sunday</span>
+
+                        <br />
+                    }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TimeOfDay)
+                @Html.DisplayFor(modelItem => item.StartTime)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndTime)
+                </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

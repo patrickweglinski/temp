@@ -14,13 +14,26 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ClassDept" class="control-label"></label>
-                <input asp-for="ClassDept" class="form-control" />
+                <select asp-for="ClassDept" class="form-control">
+                    <option value="">Select Department</option>
+                    <option value="MATH">MATH</option>
+                    <option value="CS">CS</option>
+                    <option value="ENGR">ENGR</option>
+                    <option value="WEB">WEB</option>
+                    <option value="NET">NET</option>
+                </select>
                 <span asp-validation-for="ClassDept" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="ClassName" class="control-label"></label>
                 <input asp-for="ClassName" class="form-control" />
                 <span asp-validation-for="ClassName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassNumber" class="control-label"></label>
+                <input asp-for="ClassNumber" class="form-control" />
+                <span asp-validation-for="ClassNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CreditHours" class="control-label"></label>
@@ -33,14 +46,26 @@
                 <span asp-validation-for="Location" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DaysOfWeek" class="control-label"></label>
-                <input asp-for="DaysOfWeek" class="form-control" />
-                <span asp-validation-for="DaysOfWeek" class="text-danger"></span>
+                <label>Select Days of the Week</label><br />
+                <input type="checkbox" value="True" name="Monday"/>Monday<br/>
+                <input type="checkbox" value="True" name="Tuesday" />Tuesday<br />
+                <input type="checkbox" value="True" name="Wednesday" />Wednesday<br />
+                <input type="checkbox" value="True" name="Thursday"/>Thursday<br/>
+                <input type="checkbox" value="True" name="Friday" />Friday<br />
+                <input type="checkbox" value="True" name="Saturday" />Saturday<br />
+                <input type="checkbox" value="True" name="Sunday" />Sunday<br />
             </div>
+
             <div class="form-group">
-                <label asp-for="TimeOfDay" class="control-label"></label>
-                <input asp-for="TimeOfDay" class="form-control" />
-                <span asp-validation-for="TimeOfDay" class="text-danger"></span>
+                <label asp-for="StartTime" class="control-label"></label>
+                <input asp-for="StartTime" class="form-control" type="time">
+                <span asp-validation-for="StartTime" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EndTime" class="control-label"></label>
+                <input asp-for="EndTime" class="form-control" type="time" />
+                <span asp-validation-for="EndTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

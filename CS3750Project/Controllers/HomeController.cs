@@ -26,5 +26,10 @@ namespace CS3750Project.Controllers
         {
             return RedirectToAction("Index", "Upload");
         }
+
+        public IActionResult Calendar()
+        {
+            return View("~/Views/Calendar/Index.cshtml");
+        }
     }
 }

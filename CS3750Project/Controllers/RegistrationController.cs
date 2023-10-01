@@ -23,13 +23,15 @@ namespace CS3750Project.Controllers
                 return NotFound();
             }
 
-            return View(user);
+            return View(await _context.Class.ToListAsync());
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(string email)
+        public async Task<IActionResult> Register()
         {
+            string email = HttpContext.Session.GetString("GetUser");
             Models.User user = await _context.User.FindAsync(email);
+            /*
             if (user.IsStudent) 
             {
                 user.IsStudent = false;
@@ -40,7 +42,7 @@ namespace CS3750Project.Controllers
             }
             
             _context.Update(user);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();*/
             return RedirectToAction("Index", "Registration", new { email = user.Email });
         }
 

@@ -1,4 +1,4 @@
-﻿@model CS3750Project.Models.User
+﻿@model IEnumerable<CS3750Project.Models.Class>
 
 @{
     ViewData["Title"] = "Class Registration";
@@ -10,37 +10,90 @@
     <table>
         <thead>
             <tr>
-                <th>Course</th>
+                <th>Subject </th>
+                <th>Course Number</th>
                 <th>Title</th>
+                <th>Credit Hours</th>
                 <th>Instructor</th>
                 <th>Room</th>
+                <th>Meeting Days</th>
                 <th>Meeting Time</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>CS 3752</td>
-                <td>Software Engineering II</td>
-                <td>Arpit Christi</td>
-                <td>CAE 141</td>
-                <td>11:30AM - 1:20PM T, F</td>
-                <td >
-                    @using (Html.BeginForm("Register", "Registration", FormMethod.Post))
-                    {
-                        @Html.HiddenFor(Model => Model.Email)
-                        @if (Model.IsStudent)
+            @foreach (var item in Model) {
+        <tr>
+            <td>
+               @Html.DisplayFor(modelItem => item.ClassDept)
+            </td>
+            <td> 
+               @Html.DisplayFor(modelItem => item.ClassNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreditHours)
+            </td>
+            <td>
+                Instructor Name
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                        @if (item.Monday)
                         {
-                            <input type="Submit" value="Registraton">
+                            <span>Monday</span>
                         }
-                        else
+                        @if (item.Tuesday)
                         {
-                            <input type="Submit" value="Drop">
-                        }                     
-                    }
-                </td>
-            </tr>
-        </tbody>
-        
+                            <span>Tuesday</span>
+                        }
+                        @if (item.Wednesday)
+                        {
+                            <span>Wednesday</span>
+                        }
+                        @if (item.Thursday)
+                        {
+                            <span>Thursday</span>
+                        }
+                        @if (item.Friday)
+                        {
+                            <span>Friday</span>
+                        }
+                        @if (item.Saturday)
+                        {
+                            <span>Saturday</span>
+
+                        }
+                        @if (item.Sunday)
+                        {
+                            <span>Sunday</span>
+                        }
+                    </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+                 -
+                @Html.DisplayFor(modelItem => item.EndTime)
+            </td>
+            <td>
+                        @using (Html.BeginForm("Register", "Registration", FormMethod.Post))
+                        {
+
+                            @if (true)
+                            {
+                                <input type="Submit" value="Registraton">
+                            }
+                            else
+                            {
+                                <input type="Submit" value="Drop">
+                            }
+                        }
+            </td>
+        </tr>      
+            }
+        </tbody>        
     </table>
     
 </div>
@@ -51,9 +104,9 @@
     }
 
     th, td {
-        width: 200px;
+        width: 400px;
         text-align: center;
-        padding: 5px;
+        padding: 10px;
     }
 
 </style>

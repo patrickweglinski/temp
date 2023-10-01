@@ -32,5 +32,11 @@ namespace CS3750Project.Controllers
             string id = HttpContext.Session.GetString("GetUser");
             return RedirectToAction("Index", "Registration", new { email = id });
         }
+
+        public IActionResult Classes()
+        {
+            return RedirectToAction("Index", "Classes");
+        }
+
     }
 }

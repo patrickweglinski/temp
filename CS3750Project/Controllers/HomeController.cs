@@ -21,7 +21,11 @@ namespace CS3750Project.Controllers
             string id = HttpContext.Session.GetString("GetUser");
             return RedirectToAction("Index", "Profile", new { email = id });
         }
-
+        public IActionResult Classes ()
+        {
+            string id = HttpContext.Session.GetString("GetUser");
+            return RedirectToAction("Index", "Classes", new { email = id });
+        }
         public IActionResult Upload()
         {
             return RedirectToAction("Index", "Upload");

@@ -19,8 +19,9 @@ namespace CS3750Project.Models
       
         [Key]
         public int Id { get; set; }
-    
-       
+
+        public string? InstructorId { get; set; }
+        //public User Instructor { get; set; }
         [Required]
         public ClassDepartment ClassDept { get; set; }
         [Required]

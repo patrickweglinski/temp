@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CS3750Project.Data;
 using CS3750Project.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace CS3750Project.Controllers
 {
@@ -56,15 +57,45 @@ namespace CS3750Project.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ClassDept,ClassName,ClassNumber,CreditHours,Location,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,StartTime,EndTime")] Class @class)
+        public async Task<IActionResult> Create([Bind("Id,InstructorId,ClassDept,ClassName,ClassNumber,CreditHours,Location,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,StartTime,EndTime")] Class @class)
         {
+            // Retrieve user ID from session
+            var userId = HttpContext.Session.GetString("GetUser");
+            var loggedInUser = await _context.User.FindAsync(userId);
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                // Handle error when the user is not signed in
+                ModelState.AddModelError("", "You must be signed in to create a class.");
+                return View(@class);
+            }
+
+            if (loggedInUser != null && !loggedInUser.IsStudent)
+            {
+                // Assign the user ID as the instructor ID for the class
+                @class.InstructorId = userId;
+            }
+            else
+            {
+                // Handle error when the logged-in user is a student or not found
+                ModelState.AddModelError("", "You must be an instructor to create a class.");
+            }
+                
             if (ModelState.IsValid)
             {
-                _context.Add(@class);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                // Check if the user is not a student (you can customize this check based on your logic)
+                
+                    // Add the class to the context and save changes
+                    _context.Add(@class);
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction(nameof(Index));
+                
+                
             }
-            var errors = ModelState.Select(x => x.Value.Errors).Where(y =>y.Count > 0).ToList();
+
+             // If ModelState is not valid, return to the view with errors
+            var errors = ModelState.Select(x => x.Value.Errors).Where(y => y.Count > 0).ToList();
             return View(@class);
         }
 

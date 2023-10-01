@@ -16,6 +16,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\House Vagrant\Documents\GitHub\CS3750project\CS3750Project
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Calendar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Classes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Classes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Classes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Classes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Classes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Profile/UploadForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxVcGxvYWRGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Registration/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,10 +78,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/SignUp/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnblVwXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Upload/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBsb2FkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/House Vagrant/Documents/GitHub/CS3750project/CS3750Project/Views/Welcome/Index.cshtml]

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CS3750Project.Migrations
 {
     [DbContext(typeof(CS3750ProjectContext))]
-    [Migration("20230924050550_AddWebsiteLinksToUserModel")]
-    partial class AddWebsiteLinksToUserModel
+    [Migration("20230928151439_initial_create")]
+    partial class initial_create
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,63 @@ namespace CS3750Project.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("CS3750Project.Models.Class", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ClassDept")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ClassName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ClassNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreditHours")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Friday")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Monday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Saturday")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Sunday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Thursday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Tuesday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Wednesday")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Class");
+                });
 
             modelBuilder.Entity("CS3750Project.Models.User", b =>
                 {
@@ -44,6 +101,9 @@ namespace CS3750Project.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageFileName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsStudent")

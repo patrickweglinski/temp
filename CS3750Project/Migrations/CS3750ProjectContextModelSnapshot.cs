@@ -50,8 +50,7 @@ namespace CS3750Project.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("InstructorId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Location")
                         .IsRequired()
@@ -79,8 +78,6 @@ namespace CS3750Project.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("InstructorId");
 
                     b.ToTable("Class");
                 });
@@ -138,17 +135,6 @@ namespace CS3750Project.Migrations
                     b.HasKey("Email");
 
                     b.ToTable("User");
-                });
-
-            modelBuilder.Entity("CS3750Project.Models.Class", b =>
-                {
-                    b.HasOne("CS3750Project.Models.User", "Instructor")
-                        .WithMany()
-                        .HasForeignKey("InstructorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Instructor");
                 });
 #pragma warning restore 612, 618
         }

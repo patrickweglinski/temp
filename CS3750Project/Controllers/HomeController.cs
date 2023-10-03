@@ -68,6 +68,16 @@ namespace CS3750Project.Controllers
             return RedirectToAction("Index", "Upload");
         }
 
+        public IActionResult Registration()
+        {
+            string id = HttpContext.Session.GetString("GetUser");
+            return RedirectToAction("Index", "Registration", new { email = id });
+        }
+        public IActionResult Calendar()
+        {
+            return View("~/Views/Calendar/Index.cshtml");
+        }
+
     }
 }
 

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CS3750Project.Migrations
 {
     /// <inheritdoc />
-    public partial class initial_create : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,6 +17,7 @@ namespace CS3750Project.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    InstructorId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClassDept = table.Column<int>(type: "int", nullable: false),
                     ClassName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ClassNumber = table.Column<int>(type: "int", nullable: false),

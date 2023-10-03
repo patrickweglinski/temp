@@ -75,7 +75,7 @@ namespace CS3750Project.Controllers
         public IActionResult Calendar()
         {
             return RedirectToAction("Index", "Calendar");
-        }
+		}
 
     }
 }

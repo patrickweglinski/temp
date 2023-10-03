@@ -44,13 +44,13 @@ namespace CS3750Project.Models
 
         [Required]
         [DisplayName("Start Time:"),
-        DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm:ss}")]
-        public System.DateTime StartTime { get; set; }
+        DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm}")]
+        public TimeSpan StartTime { get; set; }
         [Required]
         [DisplayName("End Time:"),
-        DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm:ss}")]
-        public System.DateTime EndTime { get; set; }
-     
-        
+        DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm}")]
+        public TimeSpan EndTime { get; set; }
+
+
     }
 }

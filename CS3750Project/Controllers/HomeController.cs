@@ -75,7 +75,8 @@ namespace CS3750Project.Controllers
         }
         public IActionResult Calendar()
         {
-            return View("~/Views/Calendar/Index.cshtml");
+            string id = HttpContext.Session.GetString("GetUser");
+            return RedirectToAction("Index", "Calendar", new { email = id });
         }
 
     }

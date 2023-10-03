@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CS3750Project.Migrations
 {
     [DbContext(typeof(CS3750ProjectContext))]
-    [Migration("20231002234435_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231003021143_InitialMigrate")]
+    partial class InitialMigrate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,8 +46,8 @@ namespace CS3750Project.Migrations
                     b.Property<int>("CreditHours")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
 
                     b.Property<bool>("Friday")
                         .HasColumnType("bit");
@@ -65,8 +65,8 @@ namespace CS3750Project.Migrations
                     b.Property<bool>("Saturday")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
 
                     b.Property<bool>("Sunday")
                         .HasColumnType("bit");

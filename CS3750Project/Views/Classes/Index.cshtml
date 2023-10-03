@@ -22,8 +22,12 @@
                 @Html.DisplayNameFor(model => model.ClassNumber)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.InstructorId)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.CreditHours)
             </th>
+           
             <th>
                 @Html.DisplayNameFor(model => model.Location)
             </th>
@@ -49,12 +53,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ClassName)
             </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.ClassNumber)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.InstructorId)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.CreditHours)
             </td>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.Location)
             </td>

@@ -43,8 +43,8 @@ namespace CS3750Project.Migrations
                     b.Property<int>("CreditHours")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
 
                     b.Property<bool>("Friday")
                         .HasColumnType("bit");
@@ -62,8 +62,8 @@ namespace CS3750Project.Migrations
                     b.Property<bool>("Saturday")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
 
                     b.Property<bool>("Sunday")
                         .HasColumnType("bit");

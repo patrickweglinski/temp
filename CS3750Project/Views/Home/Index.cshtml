@@ -3,98 +3,170 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    
+
 }
 
-@for (int i = 0; i < Model.Count(); i++){
-    <div class="card-container">
-    <div class="card" style="background-color: @GetRandomColor()">
-        <h2>@Model[i].ClassDept @Model[i].ClassNumber.ToString()</h2>
-        <div class="info">
-            <p>@Model[i].ClassName</p>
-            <p>@Model[i].Location</p>
-            <p>@Model[i].StartTime.ToString("hh\\:mm") - @Model[i].EndTime.ToString("hh\\:mm")</p>
-                
-            <p >
-                @if (Model[i].Monday)
-                {
-                    <p class="days" >M -</p>
-                }
-                @if (Model[i].Tuesday)
-                {
-                    <p class="days" >Tu -</p>
-                }
-                @if (Model[i].Wednesday)
-                {
-                    <p class="days" > W</p>
-                }
-                @if (Model[i].Thursday)
-                {
-                    <p class="days" > Th</p>
-                }
-                @if (Model[i].Friday)
-                {
-                    <p class="days" > Fri</p>
-                }
-                @if (Model[i].Saturday)
-                {
-                    <p class="days" > Sat</p>
-                }
-                @if (Model[i].Sunday)
-                {
-                    <p class="days" > Sun</p>
-                }
-            </p>
-        </div>
+<div id="grid">
 
+        <div class="card-container">
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            
+                <div class="card" style="background-color: @GetRandomColor()">
+                    <h2>@Model[i].ClassDept @Model[i].ClassNumber</h2>
+                    <div class="info">
+                        <p>@Model[i].ClassName</p>
+                        <p>@Model[i].Location</p>
+                        <p>(@Model[i].StartTime - @Model[i].EndTime)</p>
+                        
+                        <p >
+                            @if (Model[i].Monday)
+                            {
+                                <p class="days" >M -</p>
+                            }
+                            @if (Model[i].Tuesday)
+                            {
+                                <p class="days" >Tu -</p>
+                            }
+                            @if (Model[i].Wednesday)
+                            {
+                                <p class="days" > W</p>
+                            }
+                            @if (Model[i].Thursday)
+                            {
+                                <p class="days" > Th</p>
+                            }
+                            @if (Model[i].Friday)
+                            {
+                                <p class="days" > Fri</p>
+                            }
+                            @if (Model[i].Saturday)
+                            {
+                                <p class="days" > Sat</p>
+                            }
+                            @if (Model[i].Sunday)
+                            {
+                                <p class="days" > Sun</p>
+                            }
+                        </p>
+                    </div>
+
+                </div>
+        }
+
+        </div>
+        
+
+
+    <div class="barOnSide">
+    <h2 id="toDoHead">To Do</h2>
+    <div class="sidebar-item">
+        <p><strong>Math 1010 Assignment:</strong> Complete exercises 1-5</p>
+        <p>Due Date: October 15, 2023</p>
     </div>
+    <div class="sidebar-item">
+        <p><strong>ENGR 2010 Assignment:</strong> Research project proposal</p>
+        <p>Due Date: October 20, 2023</p>
+    </div>
+    <div class="sidebar-item">
+        <p><strong>WEB 3 Assignment:</strong> Develop a responsive website</p>
+        <p>Due Date: October 25, 2023</p>
+    </div>
+    <div class="sidebar-item">
+        <p><strong>ENGR 1234 Assignment:</strong> Lab report on experiment results</p>
+        <p>Due Date: October 18, 2023</p>
+    </div>
+</div>
+
+
 
 </div>
-}
-
 
 
 <style>
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px;
+    #grid{
+        display:grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
     }
 
-    .info {
-        border-style: solid;
-        border-radius: 1em;
-        border-color: darkgray;
-        padding: 1em;
-        filter: grayscale(60%);
+    #toDoHead{
+        text-align: center;
     }
+
+    .card-container{
+        /*grid-column:span 2;*/
+    }
+
+
+    .barOnSide {
+          float: right;
+          height: 100%; 
+          background-color:antiquewhite;
+          overflow-x: hidden;
+          padding-top: 2%;
+          border-radius: 10px;
+
+    }
+
 
     .card {
-        width: 50%;
-        float: left;
-        padding: 20px;
-        font-size:large;
+        width: 40%; /* Adjusted width to account for margins and padding */
+        padding: 2%;
+        font-size: large;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        padding: 20px;
-        margin: 20px;
+        margin: 10px;
         text-align: left;
+        cursor: pointer;
+        display: inline-block;
+        filter: saturate(.6);
+    }
+
+    .info{
+        border-style:solid;
+        border-radius: 10px;
+        padding: .5em;
+    }
+
+    .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar-item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
         color: darkslategray;
     }
-    
+
     .days {
-        display:inline-block;
+        display: inline-block;
         color: #666;
     }
+
+    .sidebar-item {
+        margin: 10px; 
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #ddd; 
+        cursor: pointer;
+    }
+
 
     @functions {
         string GetRandomColor()
         {
-            var colors = new List<string> { "lavender","seashell", "honeydew","azure", "linen", "lavenderblush", "floralwhite", "lightpink" };
+            var colors = new List<string> {
+                "lavender", "seashell", "honeydew", "azure", "linen", "lavenderblush", "floralwhite", "lightpink",
+                "aliceblue", "mintcream", "whitesmoke", "lightgray", "lightsteelblue", "cornsilk", "lemonchiffon", "papayawhip",
+                "bisque", "peachpuff", "antiquewhite", "beige", "oldlace", "ivory", "lightgoldenrodyellow", "palegoldenrod",
+                "wheat", "moccasin", "navajowhite", "palegreen", "lightgreen", "lightblue", "powderblue",
+                "lightcoral", "lightsalmon", "mistyrose", "lightyellow", "palevioletred", "rosybrown", "khaki", "cornflowerblue",
+                "thistle", "plum", "lightseagreen", "pale turquoise"
+            };
+
             var randomIndex = new Random().Next(0, colors.Count);
             return colors[randomIndex];
         }

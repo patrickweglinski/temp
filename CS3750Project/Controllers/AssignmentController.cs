@@ -2,6 +2,7 @@
 using CS3750Project.Models;
 using Microsoft.EntityFrameworkCore;
 using CS3750Project.Data;
+using System.Dynamic;
 
 namespace CS3750Project.Controllers
 {
@@ -24,10 +25,11 @@ namespace CS3750Project.Controllers
                 assignments = new List<Assignment>();
             }
 
-            MainPageModel model = new MainPageModel();
 
             Assignment assignment = _context.Assignment.FirstOrDefault(c => c.ClassId == classId);
 
+
+            dynamic model = new ExpandoObject();
             model.Course = course;
             model.Assignments = assignments;
             model.Assignment = assignment;

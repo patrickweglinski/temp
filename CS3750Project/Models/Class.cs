@@ -20,6 +20,10 @@ namespace CS3750Project.Models
         [Key]
         public int Id { get; set; }
 
+        //Assignments
+
+        public List<Assignment>? Assignments { get; set; }
+
         public string? InstructorId { get; set; }
 
         public string? InstructorName {  get; set; }

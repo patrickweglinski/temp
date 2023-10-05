@@ -1,0 +1,55 @@
+﻿@model CS3750Project.Controllers.AssignmentController.MainPageModel
+@{
+    ViewData["Title"] = "Assignments";
+}
+
+<h1>@Model.Course.ClassDept @Model.Course.ClassNumber</h1>
+
+<p>
+    <a href="/Assignment/Create/?classId=@Model.Course.Id">Add Assignment</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Points
+            </th>
+            <th>
+                Submission Type
+            </th>
+            <th>
+                Due date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Assignments)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Points
+                </td>
+
+                <td>
+                    @item.Submission
+                </td>
+                <td>
+                    @item.Day
+                </td>
+                <td>
+                    @item.Time
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

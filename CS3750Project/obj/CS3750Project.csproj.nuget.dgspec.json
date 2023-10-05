@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\CS3750Project.csproj": {}
+    "C:\\Users\\9Epicman\\Source\\Repos\\oct42\\CS3750Project\\CS3750Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\CS3750Project.csproj": {
+    "C:\\Users\\9Epicman\\Source\\Repos\\oct42\\CS3750Project\\CS3750Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\CS3750Project.csproj",
+        "projectUniqueName": "C:\\Users\\9Epicman\\Source\\Repos\\oct42\\CS3750Project\\CS3750Project.csproj",
         "projectName": "CS3750Project",
-        "projectPath": "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\CS3750Project.csproj",
-        "packagesPath": "C:\\Users\\House Vagrant\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\House Vagrant\\Documents\\GitHub\\CS3750project\\CS3750Project\\obj\\",
+        "projectPath": "C:\\Users\\9Epicman\\Source\\Repos\\oct42\\CS3750Project\\CS3750Project.csproj",
+        "packagesPath": "C:\\Users\\9Epicman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\9Epicman\\Source\\Repos\\oct42\\CS3750Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\House Vagrant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\9Epicman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

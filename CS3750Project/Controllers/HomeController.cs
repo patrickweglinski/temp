@@ -25,6 +25,7 @@ namespace CS3750Project.Controllers
             var classes = _context.Class
                 .Select(c => new Class
                 {
+                    Id = c.Id,  
                     ClassName = c.ClassName,
                     ClassDept = c.ClassDept,
                     ClassNumber = c.ClassNumber,

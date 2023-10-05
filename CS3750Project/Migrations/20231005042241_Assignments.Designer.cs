@@ -4,6 +4,7 @@ using CS3750Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CS3750Project.Migrations
 {
     [DbContext(typeof(CS3750ProjectContext))]
-    partial class CS3750ProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20231005042241_Assignments")]
+    partial class Assignments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,11 +33,7 @@ namespace CS3750Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("Day")
-                        .IsRequired()
+                    b.Property<DateTime>("DateDue")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -46,12 +45,7 @@ namespace CS3750Project.Migrations
                     b.Property<int>("Submission")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("Time")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ClassId");
 
                     b.ToTable("Assignment");
                 });
@@ -249,17 +243,6 @@ namespace CS3750Project.Migrations
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("CS3750Project.Models.Assignment", b =>
-                {
-                    b.HasOne("CS3750Project.Models.Class", "Class")
-                        .WithMany("Assignments")
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Class");
-                });
-
             modelBuilder.Entity("CS3750Project.Models.ClassIdentify", b =>
                 {
                     b.HasOne("CS3750Project.Models.Registration", null)
@@ -272,11 +255,6 @@ namespace CS3750Project.Migrations
                     b.HasOne("CS3750Project.Models.Registration", null)
                         .WithMany("IsRegistered")
                         .HasForeignKey("RegistrationStudentId");
-                });
-
-            modelBuilder.Entity("CS3750Project.Models.Class", b =>
-                {
-                    b.Navigation("Assignments");
                 });
 
             modelBuilder.Entity("CS3750Project.Models.Registration", b =>

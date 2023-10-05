@@ -9,42 +9,42 @@
 <div id="grid">
 
         <div class="card-container">
-        @for (int i = 0; i < Model.Count(); i++)
+        @foreach (var value in Model)
         {
-            
-                <div class="card" style="background-color: @GetRandomColor()">
-                    <h2>@Model[i].ClassDept @Model[i].ClassNumber</h2>
+            <a href='@Url.Action("Index", "Assignment", new { ClassId = @value.Id})' style="text-decoration: none;">
+                <div class="card"  style="background-color: @GetRandomColor()">
+                    <h2>@value.ClassDept @value.ClassNumber</h2>
                     <div class="info">
-                        <p>@Model[i].ClassName</p>
-                        <p>@Model[i].Location</p>
-                        <p>(@Model[i].StartTime - @Model[i].EndTime)</p>
+                        <p>@value.ClassName</p>
+                        <p>@value.Location</p>
+                        <p>(@value.StartTime - @value.EndTime)</p>
                         
                         <p >
-                            @if (Model[i].Monday)
+                            @if (@value.Monday)
                             {
                                 <p class="days" >M -</p>
                             }
-                            @if (Model[i].Tuesday)
+                            @if (@value.Tuesday)
                             {
                                 <p class="days" >Tu -</p>
                             }
-                            @if (Model[i].Wednesday)
+                            @if (@value.Wednesday)
                             {
                                 <p class="days" > W</p>
                             }
-                            @if (Model[i].Thursday)
+                            @if (@value.Thursday)
                             {
                                 <p class="days" > Th</p>
                             }
-                            @if (Model[i].Friday)
+                            @if (@value.Friday)
                             {
                                 <p class="days" > Fri</p>
                             }
-                            @if (Model[i].Saturday)
+                            @if (@value.Saturday)
                             {
                                 <p class="days" > Sat</p>
                             }
-                            @if (Model[i].Sunday)
+                            @if (@value.Sunday)
                             {
                                 <p class="days" > Sun</p>
                             }
@@ -52,10 +52,11 @@
                     </div>
 
                 </div>
+                 </a>
         }
 
         </div>
-        
+     
 
 
     <div class="barOnSide">

@@ -26,6 +26,8 @@ namespace CS3750Project.Data
 
         public DbSet<CS3750Project.Models.ClassIdentify>? ClassIdentify { get; set; }
 
-        
+        public DbSet<CS3750Project.Models.Assignment>? Assignment { get; set; }
+
+
     }
 }

@@ -4,6 +4,7 @@ using CS3750Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CS3750Project.Migrations
 {
     [DbContext(typeof(CS3750ProjectContext))]
-    partial class CS3750ProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20231005102813_UpdateAssignment")]
+    partial class UpdateAssignment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,16 +27,16 @@ namespace CS3750Project.Migrations
 
             modelBuilder.Entity("CS3750Project.Models.Assignment", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
 
                     b.Property<int>("ClassId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("Day")
+                    b.Property<DateTime?>("DateDue")
                         .IsRequired()
                         .HasColumnType("datetime2");
 
@@ -45,9 +48,6 @@ namespace CS3750Project.Migrations
 
                     b.Property<int>("Submission")
                         .HasColumnType("int");
-
-                    b.Property<DateTime?>("Time")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

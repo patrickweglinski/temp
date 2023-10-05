@@ -67,8 +67,9 @@ namespace CS3750Project.Controllers
         {
             string StudentId = HttpContext.Session.GetString("GetUser");
 
-            Models.Registration register = await _context.Registration.Include(x => x.IsRegistered).Include(x => x.ClassId).FirstOrDefaultAsync(i => i.StudentId == StudentId);
-
+            Models.Registration register = await _context.Registration
+                .Include(x => x.IsRegistered).Include(x => x.ClassId)
+                .FirstOrDefaultAsync(i => i.StudentId == StudentId);
 
             if (register.IsRegistered[Id].IsRegistered)
             {

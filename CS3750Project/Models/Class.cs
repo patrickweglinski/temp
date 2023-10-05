@@ -29,8 +29,10 @@ namespace CS3750Project.Models
         [Required]
         public String ClassName { get; set; }
         [Required]
+        [Range(900, 7000, ErrorMessage = "Class number must be between 900 and 7000")]
         public int ClassNumber {  get; set; }
         [Required]
+        [Range(1, 6, ErrorMessage = "Credit hours must be between 1 and 6")]
         public int CreditHours { get; set; }
         [Required]
         public String Location { get; set; }
@@ -51,6 +53,7 @@ namespace CS3750Project.Models
         [Required]
         [DisplayName("End Time:"),
         DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm}")]
+        [StartTimeBeforeEndTime]
         public TimeSpan EndTime { get; set; }
 
 

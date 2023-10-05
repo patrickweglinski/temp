@@ -1,59 +1,109 @@
-﻿@model CS3750Project.Models.User
+﻿@model IEnumerable<Class>
+
 
 @{
     ViewData["Title"] = "Class Registration";
 }
 <h1>@ViewData["Title"]</h1>
 
-<div>
-    <hr />
-    <table>
+<table class="table">
         <thead>
             <tr>
-                <th>Course</th>
+                <th>Subject </th>
+                <th>Course Number</th>
                 <th>Title</th>
+                <th>Credit Hours</th>
                 <th>Instructor</th>
-                <th>Room</th>
+                <th>Location</th>
+                <th>Meeting Days</th>
                 <th>Meeting Time</th>
             </tr>
         </thead>
         <tbody>
+        @foreach (var item in Model){
             <tr>
-                <td>CS 3752</td>
-                <td>Software Engineering II</td>
-                <td>Arpit Christi</td>
-                <td>CAE 141</td>
-                <td>11:30AM - 1:20PM T, F</td>
-                <td >
-                    @using (Html.BeginForm("Register", "Registration", FormMethod.Post))
+            <td>
+               @Html.DisplayFor(modelItem => item.ClassDept)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.ClassNumber)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.ClassName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.CreditHours)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.InstructorName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                    @if (item.Monday)
                     {
-                        @Html.HiddenFor(Model => Model.Email)
-                        @if (Model.IsStudent)
-                        {
-                            <input type="Submit" value="Registraton">
-                        }
-                        else
-                        {
-                            <input type="Submit" value="Drop">
-                        }                     
+                        <span>Monday</span>
+
+                        <br />
                     }
-                </td>
-            </tr>
-        </tbody>
-        
+                    @if (item.Tuesday)
+                    {
+                        <span>Tuesday</span>
+
+                        <br />
+                    }
+                    @if (item.Wednesday)
+                    {
+                        <span>Wednesday</span>
+
+                        <br />
+                    }
+                    @if (item.Thursday)
+                    {
+                        <span>Thursday</span>
+
+                        <br />
+                    }
+                    @if (item.Friday)
+                    {
+                        <span>Friday</span>
+
+                        <br />
+                    }
+                    @if (item.Saturday)
+                    {
+                        <span>Saturday</span>
+
+                        <br />
+                    }
+                    @if (item.Sunday)
+                    {
+                        <span>Sunday</span>
+
+                        <br />
+                    }
+            <td>
+                        @Html.DisplayFor(modelItem => item.StartTime)
+                 -
+                        @Html.DisplayFor(modelItem => item.EndTime)
+            </td>
+            <td>
+                        @using (Html.BeginForm("Register", "Registration", FormMethod.Post))
+                        {
+                            @if (true)
+                            {
+                                @Html.HiddenFor(modelItem => item.Id)
+                                <input type="Submit" value="Add">
+                            }
+                            else
+                            {
+                                <input type="Submit" value="Drop">
+                            }
+                        }
+            </td>
+        </tr>      
+            }
+        </tbody>        
     </table>
-    
-</div>
 
-<style>
-    table {
-        border-collapse: collapse;
-    }
-
-    th, td {
-        width: 200px;
-        text-align: center;
-        padding: 5px;
-    }
-
-</style>

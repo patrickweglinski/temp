@@ -33,20 +33,18 @@ namespace CS3750Project.Controllers
                     Monday = c.Monday,
                     Tuesday = c.Tuesday,
                     Wednesday = c.Wednesday,
-                    Thursday = c.Thursday,  
-                    Friday = c.Friday,  
+                    Thursday = c.Thursday,
+                    Friday = c.Friday,
                     Saturday = c.Saturday,
-                    Sunday  = c.Sunday,
+                    Sunday = c.Sunday,
                     EndTime = c.EndTime
                 })
                 .ToList();
 
-           // var classes2 = _context.Class.Where(x => x.InstructorId = 32).ToList();
+            // var classes2 = _context.Class.Where(x => x.InstructorId = 32).ToList();
 
             return classes;
         }
-
-        
 
         public IActionResult Privacy()
         {
@@ -58,7 +56,7 @@ namespace CS3750Project.Controllers
             string id = HttpContext.Session.GetString("GetUser");
             return RedirectToAction("Index", "Profile", new { email = id });
         }
-        public IActionResult Classes ()
+        public IActionResult Classes()
         {
             string id = HttpContext.Session.GetString("GetUser");
             return RedirectToAction("Index", "Classes", new { email = id });
@@ -78,6 +76,7 @@ namespace CS3750Project.Controllers
             string id = HttpContext.Session.GetString("GetUser");
             return RedirectToAction("Index", "Registration", new { email = id });
         }
+        
         public IActionResult Calendar()
         {
             string id = HttpContext.Session.GetString("GetUser");
@@ -86,6 +85,3 @@ namespace CS3750Project.Controllers
 
     }
 }
-
-
-

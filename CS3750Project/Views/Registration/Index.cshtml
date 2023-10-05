@@ -1,13 +1,12 @@
-﻿@model IEnumerable<CS3750Project.Models.Class>
+﻿@model IEnumerable<Class>
+
 
 @{
     ViewData["Title"] = "Class Registration";
 }
 <h1>@ViewData["Title"]</h1>
 
-<div>
-    <hr />
-    <table>
+<table class="table">
         <thead>
             <tr>
                 <th>Subject </th>
@@ -15,75 +14,87 @@
                 <th>Title</th>
                 <th>Credit Hours</th>
                 <th>Instructor</th>
-                <th>Room</th>
+                <th>Location</th>
                 <th>Meeting Days</th>
                 <th>Meeting Time</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model) {
-        <tr>
+        @foreach (var item in Model){
+            <tr>
             <td>
                @Html.DisplayFor(modelItem => item.ClassDept)
             </td>
-            <td> 
-               @Html.DisplayFor(modelItem => item.ClassNumber)
+            <td>
+                    @Html.DisplayFor(modelItem => item.ClassNumber)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClassName)
+                    @Html.DisplayFor(modelItem => item.ClassName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreditHours)
+                    @Html.DisplayFor(modelItem => item.CreditHours)
             </td>
             <td>
-                Instructor Name
+                    @Html.DisplayFor(modelItem => item.InstructorName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Location)
+                    @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                        @if (item.Monday)
-                        {
-                            <span>Monday</span>
-                        }
-                        @if (item.Tuesday)
-                        {
-                            <span>Tuesday</span>
-                        }
-                        @if (item.Wednesday)
-                        {
-                            <span>Wednesday</span>
-                        }
-                        @if (item.Thursday)
-                        {
-                            <span>Thursday</span>
-                        }
-                        @if (item.Friday)
-                        {
-                            <span>Friday</span>
-                        }
-                        @if (item.Saturday)
-                        {
-                            <span>Saturday</span>
+                    @if (item.Monday)
+                    {
+                        <span>Monday</span>
 
-                        }
-                        @if (item.Sunday)
-                        {
-                            <span>Sunday</span>
-                        }
-                    </td>
+                        <br />
+                    }
+                    @if (item.Tuesday)
+                    {
+                        <span>Tuesday</span>
+
+                        <br />
+                    }
+                    @if (item.Wednesday)
+                    {
+                        <span>Wednesday</span>
+
+                        <br />
+                    }
+                    @if (item.Thursday)
+                    {
+                        <span>Thursday</span>
+
+                        <br />
+                    }
+                    @if (item.Friday)
+                    {
+                        <span>Friday</span>
+
+                        <br />
+                    }
+                    @if (item.Saturday)
+                    {
+                        <span>Saturday</span>
+
+                        <br />
+                    }
+                    @if (item.Sunday)
+                    {
+                        <span>Sunday</span>
+
+                        <br />
+                    }
             <td>
-                @Html.DisplayFor(modelItem => item.StartTime)
+                        @Html.DisplayFor(modelItem => item.StartTime)
                  -
-                @Html.DisplayFor(modelItem => item.EndTime)
+                        @Html.DisplayFor(modelItem => item.EndTime)
             </td>
             <td>
                         @using (Html.BeginForm("Register", "Registration", FormMethod.Post))
                         {
-
                             @if (true)
                             {
-                                <input type="Submit" value="Registraton">
+                                @Html.HiddenFor(modelItem => item.Id)
+                                <input type="Submit" value="Add">
                             }
                             else
                             {
@@ -95,18 +106,4 @@
             }
         </tbody>        
     </table>
-    
-</div>
 
-<style>
-    table {
-        border-collapse: collapse;
-    }
-
-    th, td {
-        width: 400px;
-        text-align: center;
-        padding: 10px;
-    }
-
-</style>

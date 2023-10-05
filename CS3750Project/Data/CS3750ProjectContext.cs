@@ -17,5 +17,15 @@ namespace CS3750Project.Data
         public DbSet<CS3750Project.Models.User> User { get; set; } = default!;
 
         public DbSet<CS3750Project.Models.Class>? Class { get; set; }
+
+        public DbSet<CS3750Project.Models.Registration>? Registration { get; set; }
+
+        public DbSet<CS3750Project.Models.ClassRegistration>? ClassRegistration { get; set; }
+
+        public DbSet<CS3750Project.Models.Register>? Register { get; set; }
+
+        public DbSet<CS3750Project.Models.ClassIdentify>? ClassIdentify { get; set; }
+
+        
     }
 }

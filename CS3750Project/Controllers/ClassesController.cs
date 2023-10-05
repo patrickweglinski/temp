@@ -74,6 +74,7 @@ namespace CS3750Project.Controllers
             {
                 // Assign the user ID as the instructor ID for the class
                 @class.InstructorId = userId;
+                @class.InstructorName = loggedInUser.FirstName + ' ' + loggedInUser.LastName;
             }
             else
             {

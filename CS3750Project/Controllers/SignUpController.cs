@@ -31,14 +31,24 @@ namespace CS3750Project.Controllers
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid || User == null)
-            {
+            { 
+
                 return View("Index");
             }
 
             _context.User.Add(User);
             await _context.SaveChangesAsync();
             HttpContext.Session.SetString("GetUser", User.Email);
-            return RedirectToAction("Index", "Home", new { email = User.Email });
+
+            if(User.IsStudent)
+            {
+                return RedirectToAction("Create", "Registration");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home", new { User.Email });
+            }
+            
         }
     }
 }
